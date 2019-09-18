@@ -27,6 +27,6 @@ def predict(image_path, model, topks, device,indexClass):
 
         top_class = [indexClass.get(x) for x in top_c.numpy()[0]]
         return top_p,top_class
-def ProcessType():
+def typeOfProcess():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     return device
