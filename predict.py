@@ -9,7 +9,7 @@ from collections import OrderedDict
 from PIL import Image
 import glob, os
 import utilize
-import model_functions as fm
+import generalFunctions as fm
 import argparse
 
 def predicts(args):
