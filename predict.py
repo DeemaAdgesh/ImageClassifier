@@ -14,13 +14,13 @@ import argparse
 
 def predicts(args):
     import json
-    print("loading the checkpoint")
+    
     model=fm.loadCheckpoint(args.checkpoint_path)
-    print("Loading is finished")
+    
 
     device="cpu"
     if(args.gpu==True):
-        device=utilize.ProcessType()
+        device=utilize.typeOfProcess()
     model.to(device);
     indexClass={}
     for i,value in model.class_to_idx.items():

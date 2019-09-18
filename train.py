@@ -86,7 +86,7 @@ def train(args):
     criterion = nn.NLLLoss()
     device="cpu"
     if(args.gpu==True):
-        device=utilize.ProcessType()
+        device=utilize.typeOfProcess()
     model.to(device);
     model.class_to_idx = train_dataset.class_to_idx
    
